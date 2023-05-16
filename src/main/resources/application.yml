@@ -1,17 +1,13 @@
 spring:
   profiles:
-    active: local
-    group:
-      local:
-        - common
-      prod:
-        - common
----
+    default: local
 
+---
 spring:
   config:
     activate:
-      on-profile: common
+      on-profile: local
+
   redis:
     host: ${REDIS_HOST}
     port: ${REDIS_PORT}
@@ -19,7 +15,6 @@ spring:
     multipart:
       max-file-size: 3MB
       max-request-size: 3MB
-
 logging:
   level:
     org:
@@ -78,6 +73,7 @@ spring:
             scope:
               - email
               - profile
+            redirectUri: "http://localhost:8080/login/oauth2/code/google"
           naver:
             clientId: ${N_CLIENT_ID}
             clientSecret: ${N_CLIENT_SECRET}
