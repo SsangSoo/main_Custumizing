@@ -12,5 +12,4 @@ import java.util.List;
 public class PageResponseDto<T> {
     List<T> data;
     PageInfo pageInfo;
-//    PageInfo pageInfo;
 }

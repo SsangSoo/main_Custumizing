@@ -11,6 +11,7 @@ import com.book.village.server.auth.service.CustomOAuth2MemberService;
 import com.book.village.server.auth.utils.CustomAuthorityUtils;
 import com.book.village.server.domain.member.repository.MemberRepository;
 import com.book.village.server.domain.member.service.MemberService;
+import com.book.village.server.global.utils.RedirectType;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -21,6 +22,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.logout.LogoutFilter;
+
 import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
